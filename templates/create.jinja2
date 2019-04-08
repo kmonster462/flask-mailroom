@@ -1,0 +1,12 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Create a donation{% endblock subtitle %}
+
+{% block content %}
+<form method="POST">
+    {% if error %}<p>{{ error }}</p>{% endif %}
+    <label for="donor-input">Donor Name:</label><input id="donor-input" type="text" name="donor"><br>
+    <label for="donation-input">Donation:</label><input id="donation-input" type="amount" name="donation"><br>
+    <input type="submit" value="Add your donation!">
+</form>
+{% endblock content %}
